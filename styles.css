@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #EEF9BF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    text-align: center;
+    background-color: #EEF9BF;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #75B79E;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.welcome-text, .name-label {
+    color: #75B79E;; 
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+#player-name {
+    margin-left: 10px;
+}
+
+#start-button {
+    background-color: #75B79E;; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#start-button:hover {
+    opacity: 0.9;
+}
+
+.card-grid {
+    display: flex;               
+    flex-wrap: wrap;          
+    justify-content: center;   
+    gap: 20px;              
+}
+
+.card {
+    width: 100px;
+    height: 140px;
+    perspective: 1000px; 
+    border: 1px solid #99CEA8;
+    border-radius: 10px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d; 
+}
+
+.card.flip .card-inner {
+    transform: rotateY(180deg); 
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    border-radius: 10px;
+}
+
+.card-front {
+    background-color: #99FF99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-front img {
+    width: 100px;
+    height: auto;
+}
+
+.card-back {
+    background-color: #FFF;
+    transform: rotateY(180deg); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-card {
+    margin-top: 20px; 
+    background-color: #EEF9BF;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+}
+
+#restart-button {
+    background-color: #75B79E;; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#restart-button:hover {
+    opacity: 0.9; 
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .card-grid {
+        gap: 15px;  
+    }
+
+    .card {
+        width: 80px;
+        height: 120px;
+    }
+
+    .card-front img {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .card-grid {
+        gap: 10px;
+    }
+
+    .card {
+        width: 60px;
+        height: 90px;
+    }
+
+    .card-front img {
+        width: 60px;
+    }
+}
